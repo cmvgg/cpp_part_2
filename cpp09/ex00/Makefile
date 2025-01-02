@@ -12,6 +12,9 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	$(CXX) $(OBJ) -o $(NAME)
 
+%.o: %.cpp
+	$(CXX) -c $< -o $@
+
 clean:
 	rm -rf *.o
 

@@ -21,7 +21,7 @@ ShrubberyCreationForm::~ShrubberyCreationForm() {}
 void ShrubberyCreationForm::createTreeFile() const {
     std::ofstream file((_target + "_shrubbery").c_str());
     if (file) {
-        file << "ASCII ART OF A TREE\n";
+        file << "ASCII trees";
     } else {
         std::cerr << "Failed to open file for writing.\n";
     }

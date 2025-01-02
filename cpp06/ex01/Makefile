@@ -1,6 +1,6 @@
 NAME := Serialization
 
-C := c++ -Wall -Werror -Wextra -pedantic -fsanitize=address -g3 -std=c++98
+C := c++ -Wall -Werror -Wextra -pedantic  -g3 -std=c++98 -fsanitize=address
 
 SRC_DIR := src/
 OBJ_DIR := obj/
@@ -27,3 +27,5 @@ fclean: clean
 	rm -rf ${OBJ_DIR}
 
 re: fclean all
+
+.PHONY: all clean fclean re 

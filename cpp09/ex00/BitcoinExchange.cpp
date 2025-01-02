@@ -1,5 +1,4 @@
 #include "./BitcoinExchange.hpp"
-#include <boost/date_time/gregorian/gregorian.hpp>
 
 bool isValidDate(const std::string& date) {
     try {

@@ -1,27 +1,23 @@
 NAME    := MutantStack
 
-C       := c++ -Wall -Werror -Wextra -g3 -pedantic -fsanitize=address -std=c++98
+CXX      := c++ -Wall -Werror -Wextra -g3 -pedantic -std=c++98
 
-I       := ./MutantStack.hpp
 
 SRC_FILES := main 
 
-SRC     := ${$(addsuffix .cpp, ${SRC_FILES})}
+SRC     := $(addsuffix .cpp, ${SRC_FILES})
 OBJ := $(addsuffix .o, $(SRC_FILES))
 
 all: $(NAME)
 
-$(NAME): $(OBJ) $(I)
-	$(C) $(OBJ) -o $(NAME)
+$(NAME): $(OBJ)
+	$(CXX) $(OBJ) -o $(NAME)
 
 clean:
 	rm -rf *.o
 
-a: all
-	time ./${NAME}
-
 fclean: clean
-	rm -rf ${OBJ_DIR}
+	rm -rf ${NAME}
 
 re: fclean all
 

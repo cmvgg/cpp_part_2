@@ -1,6 +1,6 @@
 NAME := ScalarConvert
 
-C := c++ -g3 -Wall -Werror -Wextra -pedantic -std=c++98
+CXX := c++ -g3 -Wall -Werror -Wextra -pedantic -std=c++98
 
 SRC_DIR := src/
 OBJ_DIR := obj/
@@ -16,7 +16,7 @@ $(NAME): $(OBJ)
 
 $(OBJ_DIR)%.o: $(SRC_DIR)%.cpp
 	mkdir -p $(OBJ_DIR)
-	$(C) -c $< -o $@
+	$(CXX) -c $< -o $@
 
 clean:
 	rm -rf $(OBJ_DIR)

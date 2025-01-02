@@ -1,6 +1,3 @@
-#ifndef SPAN_HPP
-#define SPAN_HPP
-
 #include <iostream>
 #include <vector>
 #include <stdexcept>
@@ -25,5 +22,3 @@ public:
     unsigned int shortestSpan(void) const;
     unsigned int longestSpan(void) const;
 };
-
-#endif

@@ -1,6 +1,6 @@
 NAME := Serialization
 
-C := c++ -Wall -Werror -Wextra -pedantic  -g3 -std=c++98 -fsanitize=address
+CXX := c++ -Wall -Werror -Wextra -pedantic  -g3 -std=c++98 -fsanitize=address
 
 SRC_DIR := src/
 OBJ_DIR := obj/
@@ -17,7 +17,7 @@ ${NAME}: ${OBJ}
 
 ${OBJ_DIR}%.o: ${SRC_DIR}%.cpp
 	mkdir -p ${OBJ_DIR}
-	${C} -c $< -o $@
+	${CXX} -c $< -o $@
 
 clean:
 	rm -f ${OBJ}

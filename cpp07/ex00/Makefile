@@ -1,16 +1,15 @@
 NAME        := template
 CXX         := c++
-CXXFLAGS    := -Wall -Werror -Wextra -pedantic -std=c++11 -fsanitize=address -g3
+CXXFLAGS    := -Wall -Werror -Wextra -pedantic -std=c++11 -g3
 SRC         := main.cpp
-HEADERS     := whatever.hpp
 OBJ         := $(SRC:.cpp=.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJ) $(HEADERS)
+$(NAME): $(OBJ)
 	$(CXX) $(CXXFLAGS) $^ -o $@
 
-%.o: %.cpp $(HEADERS)
+%.o: %.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:

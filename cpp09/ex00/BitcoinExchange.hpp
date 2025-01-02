@@ -6,6 +6,7 @@
 #include <string>
 #include <iomanip>
 #include <cctype>
+#include <boost/date_time/gregorian/gregorian.hpp>
 
 class BitcoinExchange {
 private:

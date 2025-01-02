@@ -1,17 +1,16 @@
 NAME := iterClass
 
-C := c++ -Wall -Werror -Wextra -pedantic -std=c++98
+CXX := c++ -Wall -Werror -Wextra -pedantic -std=c++98
 
 SRC_FILES := main
-I := ./Array.hpp
 
 SRC := $(addsuffix .cpp, $(SRC_FILES))
 OBJ := $(addsuffix .o, $(SRC_FILES))
 
 all: $(NAME)
 
-$(NAME): $(OBJ) $(I)
-	$(C) $(OBJ) -o $(NAME)
+$(NAME): $(OBJ)
+	$(CXX) $(OBJ) -o $(NAME)
 
 clean:
 	rm -rf *.o
